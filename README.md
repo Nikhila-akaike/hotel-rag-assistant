@@ -34,3 +34,40 @@ Groq LLM
 Answer
  ↓
 Streamlit UI
+
+
+## To Run Locally
+
+1. Clone the repository
+
+git clone https://github.com/Nikhila-akaike/hotel-rag-assistant.git
+cd hotel-rag-assistant
+
+2. Create and activate a virtual environment
+
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+3. Install the required packages
+
+pip install -r requirements.txt
+
+4. Configure the Groq API key
+
+Create a .env file in the project root and add:
+
+GROQ_API_KEY=your_groq_api_key
+
+5. Build the vector database
+
+Run the document processing pipeline:
+
+python -m src.pipeline
+
+This loads the hotel PDF, creates chunks, generates embeddings, and stores the vectors for retrieval.
+
+6. Run the application
+
+streamlit run app.py --server.fileWatcherType none
+
+The Streamlit AI receptionist will open in the browser.
