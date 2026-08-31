@@ -14,22 +14,23 @@ A Retrieval-Augmented Generation (RAG) based AI receptionist that answers guest 
 
 ## RAG Flow
 
+```text
 PDF
-↓
+ ↓
 Document Loading
-↓
+ ↓
 Chunking
-↓
+ ↓
 Embeddings
-↓
+ ↓
 ChromaDB
-↓
+ ↓
 Retrieval
-↓
+ ↓
 Relevant Context
-↓
+ ↓
 Groq LLM
-↓
+ ↓
 Answer
-↓
+ ↓
 Streamlit UI
